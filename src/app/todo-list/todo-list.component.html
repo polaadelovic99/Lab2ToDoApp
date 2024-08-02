@@ -1,0 +1,13 @@
+<div class="todo-list-container">
+    <h3 class="subtitle">Let's get some work done!</h3>
+    <ul class="list-group">
+        <li *ngFor="let task of tasks; let i = index"
+            class="list-group-item d-flex justify-content-between align-items-center">
+            <span [ngClass]="{'text-decoration-line-through': task.completed}">{{ task.text }}</span>
+            <div>
+                <button class="btn btn-success " (click)="emitCompleteTask(i)">Complete</button>
+                <button class="btn btn-danger " (click)="emitDeleteTask(i)">Delete</button>
+            </div>
+        </li>
+    </ul>
+</div>

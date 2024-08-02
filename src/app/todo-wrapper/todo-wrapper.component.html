@@ -1,0 +1,5 @@
+<div class="container mt-5">
+    <app-todo-form (newTask)="addTask($event)"></app-todo-form>
+    <app-todo-list [tasks]="tasks" (deleteTaskEvent)="deleteTask($event)"
+        (completeTaskEvent)="completeTask($event)"></app-todo-list>
+</div>
